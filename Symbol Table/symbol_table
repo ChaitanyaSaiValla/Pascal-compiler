@@ -1,0 +1,7 @@
+SYMBOL TABLE
+
+Offset	Name	Type
+0	a	int
+4	b	int
+8	y	float
+12	x	int

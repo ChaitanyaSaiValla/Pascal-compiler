@@ -1,0 +1,98 @@
+
+
+Generated ICG given as input for optimization: 
+
+	 t0=a+b
+	 a=t0
+	 L0:
+	 if a!=0 goto L3
+	 goto L2
+	 L3:
+	 if b!=0 goto L1
+	 goto L2
+	 L1:
+	 goto L0
+	 L2:
+	 L4:
+	 if a!=0 goto L5
+	 goto L7
+	 L7:
+	 if b!=0 goto L5
+	 goto L6
+	 L5:
+	 goto L4
+	 L6:
+
+
+ICG after eliminating common subexpressions: 
+
+	 t0=a+b
+	 a=t0
+	 L0:
+	 if a!=0 goto L3
+	 goto L2
+	 L3:
+	 if b!=0 goto L1
+	 goto L2
+	 L1:
+	 goto L0
+	 L2:
+	 L4:
+	 if a!=0 goto L5
+	 goto L7
+	 L7:
+	 if b!=0 goto L5
+	 goto L6
+	 L5:
+	 goto L4
+	 L6:
+
+
+ICG after constant folding: 
+
+	 t0=a+b
+	 a=t0
+	 L0:
+	 if a!=0 goto L3
+	 goto L2
+	 L3:
+	 if b!=0 goto L1
+	 goto L2
+	 L1:
+	 goto L0
+	 L2:
+	 L4:
+	 if a!=0 goto L5
+	 goto L7
+	 L7:
+	 if b!=0 goto L5
+	 goto L6
+	 L5:
+	 goto L4
+	 L6:
+
+
+Optimized ICG after dead code elimination: 
+
+	 t0=a+b
+	 a=t0
+	 L0:
+	 if a!=0 goto L3
+	 goto L2
+	 L3:
+	 if b!=0 goto L1
+	 goto L2
+	 L1:
+	 goto L0
+	 L2:
+	 L4:
+	 if a!=0 goto L5
+	 goto L7
+	 L7:
+	 if b!=0 goto L5
+	 goto L6
+	 L5:
+	 goto L4
+	 L6:
+
+
