@@ -20,15 +20,36 @@ To install Lex and Yacc Tools, Run the following command in terminal:
 sudo apt-get install bison flex
 ```
 
-Once you have these tools installed, you can clone this repository and run the compiler using the following command:
+Once you have these tools installed, you can clone this repository and run the compiler using the following commands:
+```
+yacc -v -d -t parser.y
+lex lexer.l
+gcc -w y.tab.c lex.yy.c -ll -o parser
+./parser < test.pas > icg.output
+python3 optimizer.py > optimized_ICG
+```
+OR
+
 ```
 ./run.sh
 ```
-This command will compile the Pascal source code in 'test.pas' and generate optimized intermediate code in 'optimized_ICG'.
+This command will compile the Pascal source code in 'test.pas' and generate Optimized intermediate code in 'optimized_ICG'.
 
-To get the symbol table, navigate to the symbol table folder and run the run.sh script: 
+To get the symbol table, navigate to the symbol table folder and run the following commands: 
+
+```
+cd Symbol Table
+yacc -v -d -t parser.y
+lex lexer.l
+gcc -w y.tab.c lex.yy.c -ll -o parser
+./parser < test.pas > symbol_table
+```
+OR
+
 ```
 cd Symbol Table
 ./run.sh
 ```
+
+This command will compile the Pascal source code in 'test.pas' and generate Symbol Table in 'symbol_table'.
 
